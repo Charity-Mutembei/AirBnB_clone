@@ -15,6 +15,7 @@ class CommandInterpreter(cmd.Cmd):
         the intialization about below creates a dictionary for the sotarge of obejcts
         """
         super().__init__()
+        self.objects = CreateObject.created_objects
     
     def do_create_object(self, name):
         """we have imported the CreateObject class for this functionality"""
@@ -29,7 +30,23 @@ class CommandInterpreter(cmd.Cmd):
         else:
             print("object creation failed")
 
+    def do_show_objects(self, _):
+        """
+        show_objects
+        Display the present objects that have been created so far
+        """
+        if self.objects:
+            print("Present Objects:")
+            for obj in self.objects:
+                obj.display()
+        else:
+            print("No objects have been created.")
+
     def do_EOF(self, line):
         return True
+
+    def postloop(self):
+        """Print an empty line after each command"""
+        print()
 if __name__ == '__main__':
     CommandInterpreter( ) .cmdloop()
