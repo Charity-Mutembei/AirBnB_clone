@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 import uuid
 from datetime import datetime
+from models import storage
 """
 These are modules that will aid generate the IDs for the created
 instances of the class, - uuid
@@ -19,6 +20,8 @@ it should have __str__ instance, save, to_dict, etc.
 
 # defining the baseclass
 class BaseModel:
+    """we create storage and instance of FileStorage in file_storage"""
+    # storage = FileStorage()
     """
     step 1: initialize it
     Here we assign the ID every time the class is evoked - uuid.uuid4()
@@ -49,6 +52,8 @@ class BaseModel:
             self.id = str(uuid.uuid4())
             self.created_at = datetime.now()
             self.updated_at = self.created_at
+            storage.new(self)
+            storage.save()
 
     # we have the save public method
     """
@@ -57,6 +62,7 @@ class BaseModel:
     """
     def save(self):
         self.updated_at = datetime.now()
+        storage.save()
 
     """
     we have the to_dict(self) method that will return a dictionary
