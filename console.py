@@ -18,6 +18,7 @@ import cmd
 
 
 class HBNBCommand(cmd.Cmd):
+    """the class and prompt as needed with cmd"""
     prompt = '(hbnb) '
 
     def do_quit(self, arg):
