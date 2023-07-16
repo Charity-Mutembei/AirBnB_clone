@@ -17,6 +17,7 @@ if __name__ == '__main__':
 import cmd
 from models import storage
 from models.base_model import BaseModel
+from models.user import User
 
 
 class HBNBCommand(cmd.Cmd):
@@ -34,7 +35,11 @@ class HBNBCommand(cmd.Cmd):
             print("** class doesn't exist **")
             return
 
-        new_instance = BaseModel()
+        if class_name == 'BaseModel':
+            new_instance = BaseModel()
+        elif class_name == 'User':
+            new_instance = User()
+
         new_instance.save()
         print(new_instance.id)
 
@@ -46,7 +51,7 @@ class HBNBCommand(cmd.Cmd):
 
         args = arg.split()
         class_name = args[0].strip()
-        if class_name not in ['BaseModel']:
+        if class_name not in ['BaseModel', 'User']:
             print("** class doesn't exist **")
             return
 
@@ -70,7 +75,7 @@ class HBNBCommand(cmd.Cmd):
 
         args = arg.split()
         class_name = args[0].strip()
-        if class_name not in ['BaseModel']:
+        if class_name not in ['BaseModel', 'User']:
             print("** class doesn't exist **")
             return
 
@@ -93,7 +98,7 @@ class HBNBCommand(cmd.Cmd):
         objects = storage.all()
         if not args:
             print([str(obj) for obj in objects.values()])
-        elif args[0] in ['BaseModel']:
+        elif args[0] in ['BaseModel', 'User']:
             print([str(obj) for obj in objects.values()])
         else:
             print("** class doesn't exist **")
@@ -106,7 +111,7 @@ class HBNBCommand(cmd.Cmd):
 
         args = arg.split()
         class_name = args[0].strip()
-        if class_name not in ['BaseModel']:
+        if class_name not in ['BaseModel', 'User']:
             print("** class doesn't exist **")
             return
 
