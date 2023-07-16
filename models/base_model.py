@@ -2,6 +2,7 @@
 import uuid
 from datetime import datetime
 from models import storage
+
 """
 These are modules that will aid generate the IDs for the created
 instances of the class, - uuid
@@ -29,31 +30,18 @@ class BaseModel:
     we also intialize the created_at and updated_at attributes
     """
     def __init__(self, *args, **kwargs):
-        """
-        the *args is not in use as of task-4. updates will mean this line
-        will be deleted.
-        if the kwargs is not empty -- each key
-        in the dictionary will be an attribute
-        to the name.
-        create_at and updated_time are ones working with datetime
-        but they are converted into strings as objects.
-        if empty -- the create id and created_at as we had in task 3 as if new.
-        """
+        self.id = str(uuid.uuid4())
+        self.created_at = datetime.now()
+        self.updated_at = datetime.now()
         if kwargs:
-            kwargs.pop('__class__, None')
-            """
-            we are just removing the __class__ key if present
-            """
-            for key, value, in kwargs.items():
-                if key in ['created_at', 'update_at']:
-                    value = datetime.strptime(value, "%Y-%m-%dT%H:%M:%S.%f")
-                setattr(self, key, value)
+            for k, v in kwargs.items():
+                if k != "__class__":
+                    setattr(self, k, v)
+                if k == "created_at" or k == "updated_at":
+                    setattr(self, k, datetime.strptime(v, "%Y-%m-%dT%H:%M:%S.%f"))
         else:
-            self.id = str(uuid.uuid4())
-            self.created_at = datetime.now()
-            self.updated_at = self.created_at
             storage.new(self)
-            storage.save()
+
 
     # we have the save public method
     """

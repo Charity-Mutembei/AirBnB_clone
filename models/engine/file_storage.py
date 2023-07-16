@@ -1,5 +1,8 @@
 #!/usr/bin/python3
 import json
+# from user import User
+from ..user import User
+from models.base_model import BaseModel
 """
 This is a class FileStorage that serializes the instances in
 BaseModel class and also deserializes the same JSON file
@@ -15,6 +18,13 @@ class FileStorage:
     __objects = {}
 
     # public instances
+    def classes(self):
+        """Returns a dictionary of supported classes for serialization"""
+        return {
+            "BaseModel": BaseModel,
+            "User": User,
+        }
+    
     def all(self):
         """returns all the objects"""
         return self.__objects
