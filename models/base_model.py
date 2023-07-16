@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 import uuid
 from datetime import datetime
-from models import storage
+import models
 
 """
 These are modules that will aid generate the IDs for the created
@@ -40,9 +40,7 @@ class BaseModel:
                 if k == "created_at" or k == "updated_at":
                     setattr(self, k, datetime.strptime(v, "%Y-%m-%dT%H:%M:%S.%f"))
         else:
-            storage.new(self)
-
-
+            models.storage.new(self)
     # we have the save public method
     """
     The method save updates the update_at above
@@ -50,7 +48,7 @@ class BaseModel:
     """
     def save(self):
         self.updated_at = datetime.now()
-        storage.save()
+        models.storage.save()
 
     """
     we have the to_dict(self) method that will return a dictionary

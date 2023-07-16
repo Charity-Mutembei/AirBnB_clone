@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 import json
-# from user import User
 from ..user import User
 from models.base_model import BaseModel
 """
@@ -24,7 +23,7 @@ class FileStorage:
             "BaseModel": BaseModel,
             "User": User,
         }
-    
+
     def all(self):
         """returns all the objects"""
         return self.__objects

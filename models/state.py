@@ -10,4 +10,4 @@ class State(BaseModel):
     has the public attributes to be name which
     should be an empty string
     """
-    name  = ""
+    name = ""
