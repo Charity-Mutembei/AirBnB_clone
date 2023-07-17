@@ -1,13 +1,10 @@
 #!/usr/bin/python3
-"""
-This class takes from the BaseModel class
-"""
-from .base_model import BaseModel
+"""models/city inherits from the class BaseModel"""
+from models.base_model import BaseModel
 
 
 class City(BaseModel):
-    """
-    Public attributes are state_id and name
-    """
+    """city class which inherits from the Basemodel class """
+
     state_id = ""
     name = ""

@@ -1,17 +1,10 @@
 #!/usr/bin/python3
-"""
-This class takes from BaseModel class
-"""
-from .base_model import BaseModel
+"""[models/place module] inherits from the class BaseModel"""
+from models.base_model import BaseModel
 
 
 class Place(BaseModel):
-    """
-    Takes public attributes to be; city_id,
-    user_id, name, description, number_rooms,
-    number_bathrooms, max_guest, price_by_night,
-    latitude, longitude, amenity_ids
-    """
+    """class place that has a number of attributes """
     city_id = ""
     user_id = ""
     name = ""
