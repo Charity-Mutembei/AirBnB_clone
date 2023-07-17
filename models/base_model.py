@@ -1,15 +1,8 @@
 #!/usr/bin/python3
-import uuid
-from datetime import datetime
-import models
-
 """
 These are modules that will aid generate the IDs for the created
 instances of the class, - uuid
 The date-time module will handle the date and time operation
-"""
-# Above you will find the imports
-"""
 This will be a base class named - BaseModel
 it is to define the common attributes or methods
 that other classes/subclasses will use.
@@ -17,13 +10,13 @@ Its public attributes are to be:
 1. id, 2. created_at date, 3. updated_at
 it should have __str__ instance, save, to_dict, etc.
 """
+import uuid
+from datetime import datetime
+import models
 
 
-# defining the baseclass
 class BaseModel:
-    """we create storage and instance of FileStorage in file_storage"""
-    # storage = FileStorage()
-    """
+    """we create storage and instance of FileStorage in file_storage
     step 1: initialize it
     Here we assign the ID every time the class is evoked - uuid.uuid4()
     We also convert the ID into string hence inside a str() method.
@@ -41,7 +34,7 @@ class BaseModel:
                     setattr(self, k, datetime.strptime(v, "%Y-%m-%dT%H:%M:%S.%f"))
         else:
             models.storage.new(self)
-    # we have the save public method
+
     """
     The method save updates the update_at above
     with the current time the instance is run every time.
