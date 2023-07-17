@@ -1,8 +1,8 @@
 #!/usr/bin/python3
-from .base_model import BaseModel
 """
 This class takes from the BaseModel class
 """
+from .base_model import BaseModel
 
 
 class City(BaseModel):

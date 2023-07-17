@@ -39,7 +39,10 @@ class BaseModel:
                 if k != "__class__":
                     setattr(self, k, v)
                 if k == "created_at" or k == "updated_at":
-                    setattr(self, k, datetime.strptime(v, "%Y-%m-%dT%H:%M:%S.%f"))
+                    setattr(
+                        self, k,
+                        datetime.strptime(v, "%Y-%m-%dT%H:%M:%S.%f")
+                        )
         else:
             models.storage.new(self)
 
