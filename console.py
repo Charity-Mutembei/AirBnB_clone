@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 import cmd
+from shlex import split
 from models import storage
 from models.base_model import BaseModel
 from models.user import User
@@ -97,20 +98,24 @@ class HBNBCommand(cmd.Cmd):
         else:
             print("** no instance found **")
 
-    def do_all(self, arg):
-        """Prints all string representation of all instances"""
-        args = arg.split()
-        objs = storage.all()
-        if not args:
-            print([str(obj) for obj in objs.values()])
+    def do_all(self, argv):
+        """
+        Print the string representation of all instances based on
+        the class name.
+
+        Args:
+            argv (str): The argument.
+
+        """
+        arg_list = split(argv)
+        objects = self.storage.all().values()
+        if not arg_list:
+            print([str(obj) for obj in objects])
         else:
-            class_name = args[0]
-            if class_name in classes:
-                for key, obj in objs.items():
-                    if key.startswith(class_name):
-                        print(str(obj))
-            else:
+            if arg_list[0] not in classes:
                 print("** class doesn't exist **")
+            else:
+                print([str(obj) for obj in objects if arg_list[0] in str(obj)])
 
     def do_update(self, arg):
         """Updates an instance based on the class name and id"""
