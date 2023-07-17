@@ -12,11 +12,8 @@ an also the console.py file to create and all methods involved.
 
 
 class User(BaseModel):
-    """inherits from BaseModel"""
+    """inherits from BaseModel- class BaseModel in base_model.py"""
     email = ""
     password = ""
     first_name = ""
     last_name = ""
-
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
