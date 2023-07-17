@@ -1,15 +1,10 @@
 #!/usr/bin/python3
-"""
-this class takes from the BaseModel class
-"""
-from .base_model import BaseModel
+"""models/review inherits from the class BaseModel"""
+from models.base_model import BaseModel
 
 
 class Review(BaseModel):
-    """
-    public class attributes place_id, user_id,
-    text
-    """
+    """Class Review that and its instances"""
     place_id = ""
     user_id = ""
     text = ""
