@@ -1,4 +1,8 @@
 #!/usr/bin/python3
+"""
+Write a program called console.py that contains
+the entry point of the command interpreter:
+"""
 import cmd
 from models import storage
 from models.base_model import BaseModel
@@ -9,7 +13,11 @@ from models.amenity import Amenity
 from models.place import Place
 from models.review import Review
 
+
 classes = {
+    """
+    Your class definition must be: class HBNBCommand(cmd.Cmd):
+    """
     "BaseModel": BaseModel,
     "User": User,
     "State": State,
@@ -21,6 +29,9 @@ classes = {
 
 
 class HBNBCommand(cmd.Cmd):
+    """
+    Your class definition must be: class HBNBCommand(cmd.Cmd):
+    """
     prompt = "(hbnb) "
 
     def do_quit(self, arg):
