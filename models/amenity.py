@@ -1,8 +1,8 @@
 #!/usr/bin/python3
-from .base_model import BaseModel
 """
 This class takes on from BaseModel class
 """
+from .base_model import BaseModel
 
 
 class Amenity(BaseModel):
