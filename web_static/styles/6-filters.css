@@ -12,6 +12,9 @@
         .popover{
             display: block;
         }
+        .popover-1{
+            display: block;
+        }
     }
 }
 button{
@@ -66,5 +69,20 @@ button{
     border-radius: 4px;
 }
 .popover ul li {
+    list-style-type: none;
+}
+.popover ul h2 {
+    font-size: 16px;
+}
+.popover-1{
+    display: none;
+    background-color: #FAFAFA;
+    width: 128%;
+    margin-left: -80%;
+    margin-top: -7%;
+    border: #DDDDDD solid 1px;
+    border-radius: 4px;
+}
+.popover-1 ul li {
     list-style-type: none;
 }
