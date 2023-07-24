@@ -1,0 +1,28 @@
+.places span {
+    display: grid;
+    grid-template-columns: repeat(2, 6fr);
+    /* display: flex; */
+    align-items: center;
+    justify-content: center;
+}
+.places .second {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.places h1{
+    align-items: start;
+    font-size: 30px;
+}
+article{
+    width: 390px;
+    padding: 20px;
+    margin: 20px;
+    border: #FF5A5F solid 1px;
+    border-radius: 4px;
+    text-align: center;
+
+    h2{
+        font: 30px;
+    }
+}
