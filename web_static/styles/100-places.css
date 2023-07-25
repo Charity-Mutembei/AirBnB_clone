@@ -1,0 +1,87 @@
+#amenities{
+    margin-top: 40px;
+    width: 100%;
+    text-align: left;
+    margin-left: 0%;
+}
+#amenities h2{
+    font-size: 16px;
+    border-bottom: #DDDDDD solid 1px;
+}
+#amenities ul, li{
+    list-style-type: none;
+}
+#amenities ul .tv, .wifi, .pets {
+    position: relative;
+    width: 100px;
+    height: 50px;
+}
+#amenities ul .tv::before {
+    content: "";
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: -40px;
+    width: 100px;
+    height: 100px;
+    background-image: url('../images/icon_tv.png');
+    background-repeat: no-repeat;
+  }
+  #amenities ul .wifi::before {
+    content: "";
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: -40px;
+    width: 100px;
+    height: 100px;
+    background-image: url('../images/icon_wifi.png');
+    background-repeat: no-repeat;
+  }
+  #amenities ul .pets::before {
+    content: "";
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: -40px;
+    width: 100px;
+    height: 100px;
+    background-image: url('../images/icon_pets.png');
+    background-repeat: no-repeat;
+  }
+#amenities ul .tv p{
+    float: right;
+    margin: 20px 0px 60px 60px;
+    width: 5vw;
+}
+#amenities ul .wifi p{
+    float: right;
+    margin: -25px 0px 60px 60px;
+    width: 5vw;
+}
+#amenities ul .pets p{
+    float: right;
+    margin: -25px 0px 60px 60px;
+    width: 5vw;
+}
+.reviews{
+    margin-top: 40px;
+    width: 100%;
+    text-align: left;
+    margin-left: 0%;
+}
+.reviews h2{
+    font-size: 16px;
+    border-bottom: #DDDDDD solid 1px;
+}
+.reviews  ul li h3 {
+    font-size: 14px;
+}
+.reviews  ul li p{
+    font-size: 12px;
+}
+.reviews ul {
+    width: 100%;
+    text-align: left;
+    margin-left: -10%;
+}
