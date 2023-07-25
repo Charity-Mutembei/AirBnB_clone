@@ -1,0 +1,221 @@
+body{
+    padding: 0;
+    margin: 0;
+}
+.places span {
+    display: grid;
+    grid-template-columns: repeat(2, 6fr);
+    /* display: flex; */
+    align-items: center;
+    justify-content: center;
+}
+.places .second {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.places h1{
+    align-items: start;
+    font-size: 30px;
+}
+article{
+    width: 390px;
+    padding: 20px;
+    margin: 20px;
+    border: #FF5A5F solid 1px;
+    border-radius: 4px;
+    text-align: center;
+
+    h2{
+        font: 30px;
+    }
+}
+.price_by_night{
+    color: #FF5A5F;
+    border: #FF5A5F solid 4px;
+    border-radius: 100%;
+    width: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 60px;
+    height: 80px;
+    font-size: 30px;
+    margin-left: 60%;
+}
+.isle-1 {
+    width: 100%;
+    display: grid;
+    grid-template-columns: (2, 8fr);
+}
+.max-guest {
+    position: relative;
+    width: 100px;
+    height: 100px;
+}
+.max-guest p{
+    float: right;
+    margin: 60px 30px 60px 60px;
+    width: 5vw;
+}
+.max-guest::before {
+    content: "";
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 100px;
+    background-image: url('../images/icon-a.png');
+    background-repeat: no-repeat;
+  }
+.information {
+    margin-top: 10%;
+}
+.information .iconic {
+    padding: 10px;
+    border-top: solid 1px #CCCCCC;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    place-items: center;
+    border-bottom: solid 1px #CCCCCC;
+}
+
+.number_rooms{
+    position: relative;
+    width: 100px;
+    height: 100px;
+}
+.number_rooms::before {
+    content: "";
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 100px;
+    background-image: url('../images/icon_bed.png');
+    background-repeat: no-repeat;
+  }
+.number_rooms p{
+    float: right;
+    margin: 60px 30px 60px 60px;
+    font-size: 13px;
+    width: 5vw;
+}
+.number_bathrooms {
+    position: relative;
+    width: 100px;
+    height: 100px;
+}
+.number_bathrooms ::before {
+    content: "";
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 100px;
+    background-image: url('../images/icon_bath.png');
+    background-repeat: no-repeat;
+  }
+.number_bathrooms p{
+    float: right;
+    margin: 60px 30px 60px 60px;
+    font-size: 13px;
+    width: 5vw;
+}
+.user p {
+    float: right;
+    width: 85vh;
+}
+.description p{
+   text-align: left;
+}
+#amenities{
+    margin-top: 40px;
+    width: 100%;
+    text-align: left;
+    margin-left: 0%;
+}
+#amenities h2{
+    font-size: 16px;
+    border-bottom: #DDDDDD solid 1px;
+}
+#amenities ul, li{
+    list-style-type: none;
+}
+#amenities ul .tv, .wifi, .pets {
+    position: relative;
+    width: 100px;
+    height: 50px;
+}
+#amenities ul .tv::before {
+    content: "";
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: -40px;
+    width: 100px;
+    height: 100px;
+    background-image: url('../images/icon_tv.png');
+    background-repeat: no-repeat;
+  }
+  #amenities ul .wifi::before {
+    content: "";
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: -40px;
+    width: 100px;
+    height: 100px;
+    background-image: url('../images/icon_wifi.png');
+    background-repeat: no-repeat;
+  }
+  #amenities ul .pets::before {
+    content: "";
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: -40px;
+    width: 100px;
+    height: 100px;
+    background-image: url('../images/icon_pets.png');
+    background-repeat: no-repeat;
+  }
+#amenities ul .tv p{
+    float: right;
+    margin: 20px 0px 60px 60px;
+    width: 5vw;
+}
+#amenities ul .wifi p{
+    float: right;
+    margin: -25px 0px 60px 60px;
+    width: 5vw;
+}
+#amenities ul .pets p{
+    float: right;
+    margin: -25px 0px 60px 60px;
+    width: 5vw;
+}
+.reviews{
+    margin-top: 40px;
+    width: 100%;
+    text-align: left;
+    margin-left: 0%;
+}
+.reviews h2{
+    font-size: 16px;
+    border-bottom: #DDDDDD solid 1px;
+}
+.reviews  ul li h3 {
+    font-size: 14px;
+}
+.reviews  ul li p{
+    font-size: 12px;
+}
+.reviews ul {
+    width: 100%;
+    text-align: left;
+    margin-left: -10%;
+}
