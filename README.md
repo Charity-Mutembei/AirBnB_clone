@@ -18,5 +18,6 @@ This project is an AirBnB backend and is to consist of the console to include th
 Side note for my teammate
 
 1. Every tasks to have a branch before reconciling it with the master - default branch.
+3. The right number was avoided intentionally.
 
 ```
